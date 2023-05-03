@@ -1,5 +1,5 @@
 # Table Insertion of Data
-  - Make sure allow fillable or guard property in model
+  ## Make sure allow fillable or guard property in model
 
 # Polymorphic Relationship 
   it has Similar to one to One, One to Many, Many to Many but
@@ -11,7 +11,7 @@
   image type profile and user images.
 
 # Making Model inside Folder with Factory
-  php artisan make:Model Master/TicketReason -fm
+  ## php artisan make:Model Master/TicketReason -fm
   return [
               'firstname' => fake()->name(),
               'lastname' => fake()->name(),
@@ -22,19 +22,20 @@
           ];
 
 
+
 # Laravel Seeder and Factory
-- you may use the --class option to specify a specific seeder class to run individually:
+  ## you may use the --class option to specify a specific seeder class to run individually:
   php artisan db:seed --class=UserSeeder
 
-- droping all table and re-running seeder
+  ## droping all table and re-running seeder
   php artisan migrate:fresh --seed
   php artisan migrate:fresh --seed --seeder=UserSeeder
 
-- Making Factory 
+  ## Making Factory 
   php artisan make:factory PostFactory
   php artisan make:factory AddressFactory --model="App\\Address" // for existing model
 
-- Relationship Faker Generator ( Seeder )
+  ## Relationship Faker Generator ( Seeder )
   - User::factory()->count(2)->has(Project::factory(10), 'createdProjects')->create();
   - User::factory()->count(2)->hasCreatedProjects(3, function ($attributes, User $user) {
               return ['name' => fake()->word() . " - By " . $user->firstname];
@@ -42,14 +43,13 @@
 
   
 # Define Scope
-  - local scopes
-    public function scopeActive(EloquentBuilder $query): void
-    {
-          $query->where('account_status', 'active');
-    }
-
+  ## local scopes
+  public function scopeActive(EloquentBuilder $query): void
+  {
+            $query->where('account_status', 'active');
+  }
   $users = User::active('admin')->get();
-  scope method should be called using lower letter
+  ## scope method should be called using lower letter
 
   - Dynamic Scopes with paramater
     public function scopeOfType(Builder $query, string $type): void
