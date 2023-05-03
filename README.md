@@ -1,26 +1,3 @@
-# Environment Key Encryption
-
-Key .......................................................................................... base64:S2Qn3yAj3Awc+mXBywTU8LFa+1VcWhFdjmrr+hGQvaw=  
-Cipher ............................................................................................................................... AES-256-CBC
-Encrypted file ........................................................................................ C:\xampp\htdocs\example-app\.env.encrypted
-
-
-# Autoloader in config foldeer
-- providers Config Files
-
-
-# How to handle Multiple Table fetching in Laravel. (Normalized tables data)
-
-
-# Laravel  Tinker laravel in Command Promt
-
-# Table Creation
-  1) Cascade On References
-  2) Seeder
-  3) Relenship data
-  4) pivot table naming convention (alphabetical).
-  5) Give Cascade on Foreign Key
-
 # Table Insertion of Data
   - Make sure allow fillable or guard property in model
 
@@ -33,8 +10,6 @@ Encrypted file .................................................................
   this table have one extra attribute 
   image type profile and user images.
 
-# For Large Data Return with pagination
-
 # Making Model inside Folder with Factory
   php artisan make:Model Master/TicketReason -fm
   return [
@@ -45,22 +20,6 @@ Encrypted file .................................................................
               'description' => fake()->paragraph(1, false),
               'account_status' => fake()->randomElement(['active', 'inactive']),
           ];
-
-# Take a Backup of database before running command like
- - php artisan migrate:refresh/fresh
-
-# Set timezone UTC in application and convert every time whenever date is used as per local setting
-
-# Create A Cache Every On Production for each Things.
-
-# Always Clear Cache on System Changes (In Production)
-
-# Do dump auto load before using php artisan tinker
-	composer dump-autoload
-	php artisan tinker
-
-
-# Laravel Collection
 
 
 # Laravel Seeder and Factory
@@ -98,4 +57,42 @@ Encrypted file .................................................................
         $query->where('type', $type);
     }
     $users = User::ofType('admin')->get();
+# Environment Key Encryption
+- Key .......................................................................................... base64:S2Qn3yAj3Awc+mXBywTU8LFa+1VcWhFdjmrr+hGQvaw=
+- Cipher ............................................................................................................................... AES-256-CBC
+- Encrypted file ........................................................................................ C:\xampp\htdocs\example-app\.env.encrypted
 
+# Autoloader in config foldeer
+- providers Config Files
+
+# How to handle Multiple Table fetching in Laravel. (Normalized tables data)
+
+# Table Creation
+  1) Cascade On References
+  2) Seeder
+  3) Relenship data
+  4) pivot table naming convention (alphabetical).
+  5) Give Cascade on Foreign Key
+
+# Laravel  Tinker laravel in Command Promot
+ - php artisan tinker
+
+
+# For Large Data Return with pagination
+
+
+# Take a Backup of database before running command like
+ - php artisan migrate:refresh/fresh
+
+# Set timezone UTC in application and convert every time whenever date is used as per local setting
+
+# Create A Cache Every On Production for each Things.
+
+# Always Clear Cache on System Changes (In Production)
+
+# Do dump auto load before using php artisan tinker
+	composer dump-autoload
+	php artisan tinker
+
+
+# Laravel Collection
