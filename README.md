@@ -184,6 +184,8 @@ Encrypted file .................................................................
   - New helper function Str::password()
   - Laravel Horizen
 
+# Laravel Form Request
+
 
 
 
