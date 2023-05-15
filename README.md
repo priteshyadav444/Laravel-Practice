@@ -1,8 +1,8 @@
 # Environment Key Encryption
 
-Key .......................................................................................... base64:S2Qn3yAj3Awc+mXBywTU8LFa+1VcWhFdjmrr+hGQvaw=  
-Cipher ............................................................................................................................... AES-256-CBC
-Encrypted file ........................................................................................ C:\xampp\htdocs\example-app\.env.encrypted
+Key .......................................................................................... base64:S2Qn3yAj3Awc+mXBywTU8LFa+1VcWhFdjmrr+hGQvaw= </br>
+Cipher ............................................................................................................................... AES-256-CBC </br>
+Encrypted file ........................................................................................ C:\xampp\htdocs\example-app\.env.encrypted </br>
 
 
 # Autoloader in config foldeer
@@ -37,6 +37,7 @@ Encrypted file .................................................................
 
 # Making Model inside Folder with Factory
   php artisan make:Model Master/TicketReason -fm
+  ```
   return [
               'firstname' => fake()->name(),
               'lastname' => fake()->name(),
@@ -45,6 +46,7 @@ Encrypted file .................................................................
               'description' => fake()->paragraph(1, false),
               'account_status' => fake()->randomElement(['active', 'inactive']),
           ];
+  ```
 
 # Take a Backup of database before running command like
  - php artisan migrate:refresh/fresh
@@ -56,9 +58,10 @@ Encrypted file .................................................................
 # Always Clear Cache on System Changes (In Production)
 
 # Do dump auto load before using php artisan tinker
+```
 	composer dump-autoload
 	php artisan tinker
-
+```
 
 # Laravel Collection
 
@@ -68,12 +71,16 @@ Encrypted file .................................................................
   php artisan db:seed --class=UserSeeder
 
 - droping all table and re-running seeder
+```
   php artisan migrate:fresh --seed
   php artisan migrate:fresh --seed --seeder=UserSeeder
+```
 
 - Making Factory 
+```
   php artisan make:factory PostFactory
   php artisan make:factory AddressFactory --model="App\\Address" // for existing model
+```
 
 - Relationship Faker Generator ( Seeder )
   - User::factory()->count(2)->has(Project::factory(10), 'createdProjects')->create();
@@ -84,10 +91,12 @@ Encrypted file .................................................................
   
 # Define Scope
   - local scopes
+  ```
     public function scopeActive(EloquentBuilder $query): void
     {
           $query->where('account_status', 'active');
     }
+  ```
 
   $users = User::active('admin')->get();
   scope method should be called using lower letter
