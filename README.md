@@ -185,11 +185,8 @@ Encrypted file .................................................................
   - Laravel Horizen
 
 # Laravel Form Request
+  - Use for request rules method to specify validation on form data.
+  - Use autrorize method to specify gates and policy
 
-
-
-
-
-
-
-
+# Laravel Data Transformation and action
+  - use attributes to transform data. Ex. Hasing Password. Converting dates, generting full name.
