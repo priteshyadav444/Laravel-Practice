@@ -1,19 +1,3 @@
-# Environment Key Encryption
-
-Key .......................................................................................... base64:S2Qn3yAj3Awc+mXBywTU8LFa+1VcWhFdjmrr+hGQvaw= </br>
-Cipher ............................................................................................................................... AES-256-CBC </br>
-Encrypted file ........................................................................................ C:\xampp\htdocs\example-app\.env.encrypted </br>
-
-
-# Autoloader in config foldeer
-- providers Config Files
-
-
-# How to handle Multiple Table fetching in Laravel. (Normalized tables data)
-
-
-# Laravel  Tinker laravel in Command Promt
-
 # Table Creation
   1) Cascade On References
   2) Seeder
@@ -199,3 +183,19 @@ Encrypted file .................................................................
 
 # Laravel Data Transformation and action
   - use attributes to transform data. Ex. Hasing Password. Converting dates, generting full name.
+
+# Environment Key Encryption
+
+Key .......................................................................................... base64:S2Qn3yAj3Awc+mXBywTU8LFa+1VcWhFdjmrr+hGQvaw= </br>
+Cipher ............................................................................................................................... AES-256-CBC </br>
+Encrypted file ........................................................................................ C:\xampp\htdocs\example-app\.env.encrypted </br>
+
+
+# Autoloader in config foldeer
+- providers Config Files
+
+
+# How to handle Multiple Table fetching in Laravel. (Normalized tables data)
+
+
+# Laravel  Tinker laravel in Command Promt
